@@ -1,0 +1,42 @@
+<meta charset="UTF-8">
+
+<h1>Programa - Calcular puntos de equipo de futbol</h1>
+
+<script>
+
+    function saltarLinea(){
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function imprimir(frase){
+        document.write(frase);
+        saltarLinea();
+    }
+
+    function calcularImc(peso, altura){
+        return (peso/ (altura * altura));
+    }
+
+    var nombre = prompt("Inform su nombre");
+    var pesoI = prompt("Informe su peso: ");
+    var alturaI = prompt("Informe su altura: ");
+
+    var imcCalculado = calcularImc(pesoI, alturaI);
+
+    imprimir(nombre + " su imc calculado es: " + imcCalculado);
+    
+    if(imcCalculado < 18.5){
+        imprimir("IMC abajo de lo recomendado");
+    }else if(imcCalculado >= 18.5 && imcCalculado <= 24.9){
+        imprimir("IMC Normal");
+    }else if(imcCalculado >= 25 && imcCalculado <30){
+        imprimir("IMC Sobrepeso");
+    }else if(imcCalculado >= 30){
+        imprimir("IMC Obesidad");
+    }
+    
+
+
+</script>

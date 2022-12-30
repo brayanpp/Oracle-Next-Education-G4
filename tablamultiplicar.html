@@ -1,0 +1,31 @@
+<meta charset="UTF-8">
+
+<h1>Programa - Multiplicar</h1>
+
+<script>
+
+    function saltarLinea(){
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function imprimir(frase){
+        document.write(frase);
+        saltarLinea();
+    }
+
+    var n = parseInt(prompt("¿Qué tabla deseas generar?"));
+    var i = 1;
+
+    imprimir("While");
+    while(i <= 10){
+        imprimir(n * i);
+        i++;
+    }
+   
+    imprimir("For");
+    for(i=1; i<=10; i++){
+        imprimir(n * i);
+    }
+</script>
